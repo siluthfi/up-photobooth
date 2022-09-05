@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\DataTables\Admin\Auth\LogHistoryDataTable;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -12,9 +13,11 @@ class LogHistoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(LogHistoryDataTable $datatable)
     {
-        //
+        return $datatable->render('admin.template.datatable', [
+            'title' => 'Log History',
+        ]);
     }
 
     /**

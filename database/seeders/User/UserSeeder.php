@@ -21,7 +21,7 @@ class UserSeeder extends Seeder
             'email' => 'superadmin@gmail.com',
             'address' => 'Jl. Antasan Kecil Barat',
             'number' => '081208120812',
-            'roles' => 'Superadmin',
+            // 'roles' => 'Superadmin',
             'password' => bcrypt('secret'),
         ]);
     }

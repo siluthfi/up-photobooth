@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+.jumbotron {
+    /* color: #524343; */
+    color: #151719;
+    font-size: 3rem;
+}
+
+.jumbotron span {
+    color: #f76f33;
+}
+
+.bg-orange {
+    background-color: #f76f33;
+}
+
+.bg-custom {
+    /* background-image: url('{{ asset("images/Asset 17.png") }}'); */
+    background-image: url("images/Asset 17.png");
+    /* background-position: center; */
+    background-size: cover;
+    /* background-size: contain; */
+    background-repeat: no-repeat;
+    height: 350px;
+}
+
+.bg-orange-2 {
+    background-color: rgb(249, 129, 52);
+}
+
+.bg-orange-3 {
+    background-color: #f9a934;
+}
+
+.bg-orange-light {
+    background-color: #ff8a57;
+}
+
+.bg-orange-lighter {
+    background-color: #ffd68c;
+}
+
+.border-bottom-orange-3 {
+    background-color: #f9a934;
+}
+
+.text-a-white {
+    text-decoration: none;
+    color: white;
+}
+
+.text-a-white:hover {
+    color: rgb(255, 230, 230);
+}
+
+.text-a-dark {
+    text-decoration: none;
+    color: #4b3f3f;
+}
+
+.text-a-dark.active {
+    color: #151719;
+}
+
+.text-a-dark:hover {
+    color: #151719;
+}
+
+.link-dark {
+    color: #151719;
+    /* position: fixed; */
+}
+
+.color-dark {
+    color: #151719;
+    text-decoration: none;
+}
+
+.link-span {
+    position: absolute;
+    bottom: 30px;
+    right: 0;
+    left: 0;
+}
+
+#linkSection {
+    margin-top: 70%;
+}
+
+#linkSection a.active {
+    color: white;
+}
+
+@media screen and (max-width: 1200px) {
+    #linkSection {
+        margin-top: 40%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    #linkSection {
+        margin-top: 30%;
+    }
+
+    .jumbotron {
+        font-size: 4rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #linkSection {
+        margin-top: 10%;
+    }
+
+    .jumbotron {
+        font-size: 4rem;
+    }
+}
+
+#linkNavbar:hover {
+    color: #ffffff;
+}
+
+.transition-3 {
+    transition: 0.3s;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.link-dark:hover {
+    cursor: pointer;
+    color: #151719;
+}
+
+.navbar-overlay {
+    position: fixed;
+    overflow: hidden;
+    width: 100%; /* Full width (cover the whole page) */
+    height: 0%; /* Full height (cover the whole page) */
+    /* background-color: rgba(249, 129, 52, 1); */
+    background-image: url("../images/navbar 2.png");
+    background-size: cover;
+    /* background-color: rgba(0, 0, 0, 0.4); */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    transition: 0.3s;
+}
+
+.navbar-overlay .rectangle {
+    z-index: -9;
+    /* margin-top: 70%; */
+    width: 100%;
+    height: 20%;
+    background-color: white;
+    transition: 0.3s;
+}
+
+@media screen and (min-width: 375px) {
+    .navbar-overlay .rectangle {
+        margin-top: 50%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .navbar-overlay .rectangle {
+        margin-top: 40%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .navbar-overlay .rectangle {
+        margin-top: 30%;
+    }
+}
+
+.collapsible-navbar-content {
+    background-color: #ffd68c;
+    padding: 5px;
+}
+
+.collapsible-navbar-content a {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 992px) {
+    .collapsible-navbar-custom {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: -1;
+        transition: 0.3s;
+        background-color: #ffd68c;
+        overflow: hidden;
+    }
+
+    .collapsible-navbar-custom.active {
+        z-index: 9;
+        top: 70%;
+        overflow: visible;
+        /* height: 100%; */
+    }
+
+    .collapsible-navbar-content a {
+        /* border: 5px solid; */
+        padding-left: 6rem;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .collapsible-navbar-content a {
+        padding-left: 4rem;
+    }
+}
+
+#navbarButton {
+    cursor: pointer;
+}

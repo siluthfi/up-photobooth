@@ -266,36 +266,40 @@ return [
     */
 
     'menu' => [
-        // ['header' => 'Config'],
-        // Navbar items:
-        // [
-        //     'type'         => 'navbar-search',
-        //     'text'         => 'search',
-        //     'topnav_right' => true,
-        // ],
-        // [
-        //     'type'         => 'fullscreen-widget',
-        //     'topnav_right' => true,
-        // ],
-
-        // Sidebar items:
-        // [
-        //     'type' => 'sidebar-menu-search',
-        //     'text' => 'search',
-        // ],
-        // [
-        //     'text'        => 'pages',
-        //     'url'         => 'admin/pages',
-        //     'icon'        => 'far fa-fw fa-file',
-        //     'label'       => 4,
-        //     'label_color' => 'success',
-        // ],
+        // Profile
         [
             'text' => 'profile',
             'url'  => 'admin/profile',
             'icon' => 'fas fa-fw fa-user',
             'topnav_user' => true
         ],
+
+        // Sidebar
+        [ 'header' => 'Main Settings' ],
+        [
+            'text'    => 'Orders',
+            'icon'    => 'fas fa-fw fa-copy',
+            'route' => 'admin.orders.index'
+            // 'submenu' => [
+            //     [
+            //         'text'  => 'List',
+            //         'icon'  => 'fas fa-file-alt',
+            //         'route' => 'admin.orders.index'
+            //     ],
+            // ],
+        ],
+        [
+            'text'  => 'Product',
+            'icon'  => 'fas fa-boxes',
+            'route' => 'admin.orders.index'
+        ],
+        [
+            'text'  => 'Client',
+            'icon'  => 'fas fa-fw fa-users',
+            'route' => 'admin.orders.index'
+        ],
+
+
         ['header' => 'Users'],
         [
             'text' => 'User List',
@@ -307,44 +311,6 @@ return [
             'url'  => 'admin/log-history',
             'icon' => 'fas fa-fw fa-history',
         ],
-        // [
-        //     'text'    => 'multilevel',
-        //     'icon'    => 'fas fa-fw fa-share',
-        //     'submenu' => [
-        //         [
-        //             'text' => 'level_one',
-        //             'url'  => '#',
-        //         ],
-        //         [
-        //             'text'    => 'level_one',
-        //             'url'     => '#',
-        //             'submenu' => [
-        //                 [
-        //                     'text' => 'level_two',
-        //                     'url'  => '#',
-        //                 ],
-        //                 [
-        //                     'text'    => 'level_two',
-        //                     'url'     => '#',
-        //                     'submenu' => [
-        //                         [
-        //                             'text' => 'level_three',
-        //                             'url'  => '#',
-        //                         ],
-        //                         [
-        //                             'text' => 'level_three',
-        //                             'url'  => '#',
-        //                         ],
-        //                     ],
-        //                 ],
-        //             ],
-        //         ],
-        //         [
-        //             'text' => 'level_one',
-        //             'url'  => '#',
-        //         ],
-        //     ],
-        // ],
     ],
 
     /*

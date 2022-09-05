@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models\Backend;
+namespace App\Models\Backend\Auth;
 
 use App\Models\HasUuid;
 use Illuminate\Database\Eloquent\Factories\HasFactory;

@@ -1,12 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin\Transactions;
 
-use App\Models\Backend\Auth\LogHistory;
-use App\Http\Requests\StoreLogHistoryRequest;
-use App\Http\Requests\UpdateLogHistoryRequest;
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 
-class LogHistoryController extends Controller
+class OrderController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +14,7 @@ class LogHistoryController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.orders.create');
     }
 
     /**
@@ -25,27 +24,34 @@ class LogHistoryController extends Controller
      */
     public function create()
     {
-        //
+        if(auth()->user() && url()->current() == route('admin.orders.create')) {
+            return view('admin.orders.create');
+        }
+
+        return view('orders.create', [
+            'title' => 'Reservasi',
+            'active' => 'order'
+        ]);
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreLogHistoryRequest  $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreLogHistoryRequest $request)
+    public function store(Request $request)
     {
-        //
+
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Backend\LogHistory  $logHistory
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(LogHistory $logHistory)
+    public function show($id)
     {
         //
     }
@@ -53,10 +59,10 @@ class LogHistoryController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Backend\LogHistory  $logHistory
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(LogHistory $logHistory)
+    public function edit($id)
     {
         //
     }
@@ -64,11 +70,11 @@ class LogHistoryController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateLogHistoryRequest  $request
-     * @param  \App\Models\Backend\LogHistory  $logHistory
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateLogHistoryRequest $request, LogHistory $logHistory)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -76,10 +82,10 @@ class LogHistoryController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Backend\LogHistory  $logHistory
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(LogHistory $logHistory)
+    public function destroy($id)
     {
         //
     }

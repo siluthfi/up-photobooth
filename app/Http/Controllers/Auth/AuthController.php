@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\Backend\LogHistory;
+use App\Models\Backend\Auth\LogHistory;
 use App\Models\CreateLogHistory;
 use Illuminate\Support\Facades\Auth;
 
