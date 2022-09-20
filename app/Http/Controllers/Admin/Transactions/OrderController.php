@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin\Transactions;
 
+use App\DataTables\Admin\Transactions\OrderDataTable;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -12,9 +13,15 @@ class OrderController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(OrderDataTable $datatable)
     {
-        return view('admin.orders.create');
+        $url = route("admin.orders.create");
+        return $datatable->render('admin.template.datatable', [
+            'title' => 'Orders',
+            'buttons' => [
+                "<a href='$url' class='btn btn-outline-primary btn-sm'>Create</a>"
+            ]
+        ]);
     }
 
     /**
@@ -25,7 +32,9 @@ class OrderController extends Controller
     public function create()
     {
         if(auth()->user() && url()->current() == route('admin.orders.create')) {
-            return view('admin.orders.create');
+            return view('admin.orders.create', [
+                'title' => 'Orders'
+            ]);
         }
 
         return view('orders.create', [

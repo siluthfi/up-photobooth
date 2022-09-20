@@ -23,6 +23,7 @@ class UserSeeder extends Seeder
             'number' => '081208120812',
             // 'roles' => 'Superadmin',
             'password' => bcrypt('secret'),
+            'photo' => 'user/user-solid.svg',
         ]);
     }
 }

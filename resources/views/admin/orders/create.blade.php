@@ -1,7 +1,11 @@
 @extends('adminlte::page')
 
-@section('title', 'Create Order')
+@section('title', $title ?? config('adminlte.title'))
 
 @section('content_header')
-    <h1>aslkfnaslf</h1>
+    <h1>Orders</h1>
+@endsection
+
+@section('content')
+    
 @endsection

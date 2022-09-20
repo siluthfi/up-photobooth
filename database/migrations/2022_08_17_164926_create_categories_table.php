@@ -18,7 +18,6 @@ return new class extends Migration
             $table->string('name');
             $table->integer('price');
             $table->text('description')->nullable();
-            $table->foreignId('photo_id')->nullable();
             $table->foreignId('product_id');
             $table->timestamps();
         });

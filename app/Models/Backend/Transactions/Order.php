@@ -12,6 +12,13 @@ class Order extends Model
 
     protected $table = 'list_orders';
     protected $fillable = [
-        
+        'code_order',
+        'client_id',
+        'product_id',
+        'color_theme',
+        'theme_name',
+        'is_backdrop',
+        'backdrop',
+        'date',
     ];
 }

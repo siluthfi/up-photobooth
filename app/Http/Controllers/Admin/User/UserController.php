@@ -1,27 +1,20 @@
 <?php
 
-namespace App\Http\Controllers\Admin\Product;
+namespace App\Http\Controllers\Admin\User;
 
-use App\DataTables\Admin\Product\ProductDataTable;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class ProductController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(ProductDataTable $datatable)
+    public function index()
     {
-        $url = route("admin.products.create");
-        return $datatable->render('admin.template.datatable', [
-            'title' => 'Products',
-            'buttons' => [
-                "<a href='$url' class='btn btn-outline-primary btn-sm'>Create</a>"
-            ]
-        ]);
+        //
     }
 
     /**
@@ -31,9 +24,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('admin.products.create', [
-            'title' => 'Create Product'
-        ]);
+        //
     }
 
     /**
@@ -44,7 +35,7 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->all());
+        //
     }
 
     /**

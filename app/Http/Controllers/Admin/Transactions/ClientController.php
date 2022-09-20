@@ -1,25 +1,25 @@
 <?php
 
-namespace App\Http\Controllers\Admin\Product;
+namespace App\Http\Controllers\Admin\Transactions;
 
-use App\DataTables\Admin\Product\ProductDataTable;
+use App\DataTables\Admin\Transactions\ClientDataTable;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class ProductController extends Controller
+class ClientController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(ProductDataTable $datatable)
+    public function index(ClientDataTable $datatable)
     {
-        $url = route("admin.products.create");
+        // $url = route('admin.client.create');
         return $datatable->render('admin.template.datatable', [
-            'title' => 'Products',
+            'title' => 'Client',
             'buttons' => [
-                "<a href='$url' class='btn btn-outline-primary btn-sm'>Create</a>"
+                // "<a href='$url' class='btn btn-outline-primary btn-sm'>Create</a>"
             ]
         ]);
     }
@@ -31,9 +31,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('admin.products.create', [
-            'title' => 'Create Product'
-        ]);
+        //
     }
 
     /**
@@ -44,7 +42,7 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->all());
+        //
     }
 
     /**

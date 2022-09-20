@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\Product\ProductController;
+use App\Http\Controllers\Admin\Transactions\ClientController;
 use App\Http\Controllers\Admin\Transactions\OrderController;
 use App\Http\Controllers\Auth\LogHistoryController;
 
@@ -38,9 +40,11 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function() {
         Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
         Route::resource('orders', OrderController::class)->names('orders');
-        Route::resource('client', OrderController::class)->names('orders');
-        Route::resource('product', OrderController::class)->names('orders');
+        Route::resource('clients', ClientController::class)->names('clients');
+        Route::resource('products', ProductController::class)->names('products');
         Route::resource('log-history', LogHistoryController::class)->names('loghistory');
+
+        // Route::resource('profile', )
     });
 
 });

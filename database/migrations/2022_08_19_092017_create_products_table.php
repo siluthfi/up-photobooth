@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('photo')->nullable();
             $table->text('description')->nullable();
+            $table->string('photo')->nullable();
             $table->timestamps();
         });
 
@@ -26,6 +27,7 @@ return new class extends Migration
             $table->string('name');
             $table->text('address')->nullable();
             $table->string('photo')->nullable();
+            // $table->foreignId('photo_id')->nullable();
             $table->text('description')->nullable();
             $table->timestamps();
         });

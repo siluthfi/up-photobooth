@@ -275,6 +275,11 @@ return [
         ],
 
         // Sidebar
+        [
+            'text' => 'Dashboard',
+            'icon' => 'fas fa-home',
+            'route' => 'admin.dashboard'
+        ],
         [ 'header' => 'Main Settings' ],
         [
             'text'    => 'Orders',
@@ -291,12 +296,12 @@ return [
         [
             'text'  => 'Product',
             'icon'  => 'fas fa-boxes',
-            'route' => 'admin.orders.index'
+            'route' => 'admin.products.index'
         ],
         [
             'text'  => 'Client',
             'icon'  => 'fas fa-fw fa-users',
-            'route' => 'admin.orders.index'
+            'route' => 'admin.clients.index'
         ],
 
 

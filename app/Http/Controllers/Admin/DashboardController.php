@@ -10,10 +10,13 @@ class DashboardController extends Controller
     public function index()
     {
         if(auth()->user() && url()->current() == route('admin.dashboard')) {
-            return view('admin.dashboard');
+            return view('admin.dashboard', [
+                'title' => 'Dashboard',
+            ]);
         }
         
         return view('dashboard.index', [
+            'title' => 'Dashboard',
             'active' => 'dashboard'
         ]);
     }
